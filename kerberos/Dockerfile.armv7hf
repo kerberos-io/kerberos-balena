@@ -1,0 +1,3 @@
+FROM kerberos/kerberos@sha256:b8680b9bbb111c9c444ebe48500364fe0bd2dd239de71fab5647301a8679b39d
+
+CMD ["bash", "/run.sh"]

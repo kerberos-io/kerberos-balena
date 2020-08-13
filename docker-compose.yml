@@ -1,0 +1,27 @@
+version: '2.1'
+networks: {}
+volumes:
+  config: {}
+  capture: {}
+  logs: {}
+  web: {}
+services:
+  main:
+    build:
+      context: kerberos
+    privileged: true
+    tty: true
+    restart: always
+    network_mode: host
+    volumes:
+      - 'config:/etc/opt/kerberosio/config'
+      - 'capture:/etc/opt/kerberosio/capture'
+      - 'logs:/etc/opt/kerberosio/logs'
+      - 'web:/var/www/web/config'
+    labels:
+      io.balena.features.kernel-modules: '1'
+      io.balena.features.firmware: '1'
+      io.balena.features.dbus: '1'
+      io.balena.features.supervisor-api: '1'
+      io.balena.features.resin-api: '1'
+      io.balena.features.balena-socket: '1'
