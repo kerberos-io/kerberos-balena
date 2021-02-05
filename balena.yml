@@ -1,14 +1,16 @@
-version: "2"
-slug: "kerberos-balena"
 name: "Kerberos.io"
+description: "Build your own surveillance system using webcams and Raspberry Pis."
 type: "sw.application"
 assets:
-  - url: "https://github.com/kerberos-io/kerberos-balena"
-    name: "repository"
-  - url: "https://avatars1.githubusercontent.com/u/8350437"
-    name: "logo"
+  repository:
+    type: "blob.asset"
+    data:
+      url: "https://github.com/kerberos-io/kerberos-balena"
+  logo:
+    type: "blob.asset"
+    data:
+      url: "https://avatars1.githubusercontent.com/u/8350437"
 data:
-  description: "Build your own surveillance system using webcams and Raspberry Pis."
   applicationEnvironmentVariables:
   defaultDeviceType: "raspberrypi4-64"
   supportedDeviceTypes:
