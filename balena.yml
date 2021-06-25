@@ -1,20 +1,31 @@
-name: "Kerberos.io"
-description: "Build your own surveillance system using webcams and Raspberry Pis."
-type: "sw.application"
+name: Kerberos.io
+type: sw.application
+description: >-
+  Build your own surveillance system using webcams and Raspberry Pis.
+joinable: false
+post-provisioning: >-
+  ## Usage instructions
+  
+  Fork this fleet and deploy the project on a balenaCloud application. Once the project released on a device, you'll need to get the EUI of the device and create a gateway on The Things Stack (V3).
+  
+  For detailed instructions on how to use configure your LoRaWAN gteway check out the [readme here](https://github.com/balenalabs/basicstation).
 assets:
   repository:
-    type: "blob.asset"
+    type: blob.asset
     data:
-      url: "https://github.com/kerberos-io/kerberos-balena"
+      url: 'https://github.com/kerberos-io/kerberos-balena'
   logo:
-    type: "blob.asset"
+    type: blob.asset
     data:
-      url: "https://avatars1.githubusercontent.com/u/8350437"
+      url: >-
+        https://raw.githubusercontent.com/kerberos-io/kerberos-balena/master/logo.png
+
 data:
   applicationEnvironmentVariables:
   defaultDeviceType: "raspberrypi4-64"
   supportedDeviceTypes:
     - "raspberrypi3"
+    - "raspberrypi3-64"
     - "raspberrypi4-64"
     - "intel-nuc"
     - "jetson-nano"
