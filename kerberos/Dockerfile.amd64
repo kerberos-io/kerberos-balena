@@ -1,3 +1,3 @@
-FROM kerberos/kerberos@sha256:5026336db4fea995ee844d4002a738fc1d64c24e7c2b94bf5ebea5ac6b380d66
+FROM kerberos/kerberos@sha256:5b972caa211a8fb78710f6c3faa0ee69adfe5518b9df45f587258d2451c5eaf9
 
 CMD ["bash", "/run.sh"]
